@@ -1,0 +1,6 @@
+E:\Training\League\League.Test\bin\Debug\League.Test.dll
+E:\Training\League\League.Test\bin\Debug\League.Test.pdb
+E:\Training\League\League.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Training\League\League.Test\obj\Debug\League.Test.dll
+E:\Training\League\League.Test\obj\Debug\League.Test.pdb
+E:\Training\League\League.Test\obj\Debug\League.Test.csprojResolveAssemblyReference.cache
