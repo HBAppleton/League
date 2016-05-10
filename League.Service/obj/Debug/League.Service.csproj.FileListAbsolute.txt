@@ -2,3 +2,4 @@ E:\Training\League\League.Service\bin\Debug\League.Service.dll
 E:\Training\League\League.Service\bin\Debug\League.Service.pdb
 E:\Training\League\League.Service\obj\Debug\League.Service.dll
 E:\Training\League\League.Service\obj\Debug\League.Service.pdb
+E:\Training\League\League.Service\obj\Debug\League.Service.csprojResolveAssemblyReference.cache
