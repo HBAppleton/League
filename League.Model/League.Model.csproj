@@ -122,6 +122,12 @@
     <Compile Include="TeamnoteConfiguration.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Vdraw.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VdrawConfiguration.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Vindividualgame.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>

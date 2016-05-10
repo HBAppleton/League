@@ -23,6 +23,7 @@ namespace League.Model
         public System.Data.Entity.DbSet<Scoresheet> Scoresheets { get; set; }
         public System.Data.Entity.DbSet<Team> Teams { get; set; }
         public System.Data.Entity.DbSet<Teamnote> Teamnotes { get; set; }
+        public System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; }
         public System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; }
         public System.Data.Entity.DbSet<Vweek> Vweeks { get; set; }
         public System.Data.Entity.DbSet<Week> Weeks { get; set; }
@@ -36,6 +37,7 @@ namespace League.Model
             Scoresheets = new FakeDbSet<Scoresheet>("Id");
             Teams = new FakeDbSet<Team>("Id");
             Teamnotes = new FakeDbSet<Teamnote>("Id");
+            Vdraws = new FakeDbSet<Vdraw>("Season", "DrawId", "WeekId", "TeamId", "TeamName", "Lane", "Pairing", "TeamGame1", "TeamGame2", "TeamGame3", "Series", "Bonus", "Total", "ScoresheetId", "BowlerId", "Position", "BowlerName", "Handicap", "BlindScore", "Game1", "Game2", "Game3");
             Vindividualgames = new FakeDbSet<Vindividualgame>("Season", "WeekNumber", "BowlerId", "Handicap", "Game", "Game1", "DrawId");
             Vweeks = new FakeDbSet<Vweek>("Season", "WeekNumber", "Round", "Id");
             Weeks = new FakeDbSet<Week>("Id");

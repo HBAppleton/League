@@ -48,6 +48,8 @@
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ITeamNoteService.cs" />
     <Compile Include="Interfaces\ITeamService.cs" />
+    <Compile Include="Interfaces\IVDrawService.cs" />
+    <Compile Include="Interfaces\IWeekService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BowlerNoteService.cs" />
     <Compile Include="Services\BowlerService.cs" />
@@ -56,6 +58,8 @@
     <Compile Include="Services\ScoresheetService.cs" />
     <Compile Include="Services\TeamNoteService.cs" />
     <Compile Include="Services\TeamService.cs" />
+    <Compile Include="Services\VDrawService.cs" />
+    <Compile Include="Services\WeekService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

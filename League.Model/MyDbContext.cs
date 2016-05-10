@@ -12,7 +12,7 @@
 
 namespace League.Model
 {
-    using System;
+
     using System.Linq;
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "2.19.1.0")]
@@ -23,16 +23,9 @@ namespace League.Model
         public System.Data.Entity.DbSet<Bowlernote> Bowlernotes { get; set; } // hba_bowler_note
         public System.Data.Entity.DbSet<Draw> Draws { get; set; } // hba_draw
         public System.Data.Entity.DbSet<Scoresheet> Scoresheets { get; set; } // hba_score_sheet
-
-        /* causes problems
-        public void Entry<T>(T entity) where T : BaseEntity :base
-        {
-            throw new NotImplementedException();
-        }
-        */
-
         public System.Data.Entity.DbSet<Team> Teams { get; set; } // hba_team
         public System.Data.Entity.DbSet<Teamnote> Teamnotes { get; set; } // hba_team_note
+        public System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; } // hba_v_draw
         public System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; } // hba_v_individual_game
         public System.Data.Entity.DbSet<Vweek> Vweeks { get; set; } // hba_v_week
         public System.Data.Entity.DbSet<Week> Weeks { get; set; } // hba_week
@@ -92,6 +85,7 @@ namespace League.Model
             modelBuilder.Configurations.Add(new ScoresheetConfiguration());
             modelBuilder.Configurations.Add(new TeamConfiguration());
             modelBuilder.Configurations.Add(new TeamnoteConfiguration());
+            modelBuilder.Configurations.Add(new VdrawConfiguration());
             modelBuilder.Configurations.Add(new VindividualgameConfiguration());
             modelBuilder.Configurations.Add(new VweekConfiguration());
             modelBuilder.Configurations.Add(new WeekConfiguration());
@@ -106,6 +100,7 @@ namespace League.Model
             modelBuilder.Configurations.Add(new ScoresheetConfiguration(schema));
             modelBuilder.Configurations.Add(new TeamConfiguration(schema));
             modelBuilder.Configurations.Add(new TeamnoteConfiguration(schema));
+            modelBuilder.Configurations.Add(new VdrawConfiguration(schema));
             modelBuilder.Configurations.Add(new VindividualgameConfiguration(schema));
             modelBuilder.Configurations.Add(new VweekConfiguration(schema));
             modelBuilder.Configurations.Add(new WeekConfiguration(schema));

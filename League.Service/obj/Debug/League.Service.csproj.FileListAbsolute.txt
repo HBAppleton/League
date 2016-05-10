@@ -3,3 +3,9 @@ E:\Training\League\League.Service\bin\Debug\League.Service.pdb
 E:\Training\League\League.Service\obj\Debug\League.Service.dll
 E:\Training\League\League.Service\obj\Debug\League.Service.pdb
 E:\Training\League\League.Service\obj\Debug\League.Service.csprojResolveAssemblyReference.cache
+E:\Training\League\League.Service\bin\Debug\League.Model.dll
+E:\Training\League\League.Service\bin\Debug\League.Repository.dll
+E:\Training\League\League.Service\bin\Debug\EntityFramework.dll
+E:\Training\League\League.Service\bin\Debug\League.Model.pdb
+E:\Training\League\League.Service\bin\Debug\League.Repository.pdb
+E:\Training\League\League.Service\bin\Debug\EntityFramework.xml

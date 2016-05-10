@@ -53,12 +53,14 @@
     <Compile Include="ITeamNoteRepository.cs" />
     <Compile Include="ITeamRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="IVDrawRepository.cs" />
     <Compile Include="IWeekRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScoresheetRepository.cs" />
     <Compile Include="TeamNoteRepository.cs" />
     <Compile Include="TeamRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
+    <Compile Include="VDrawRepository.cs" />
     <Compile Include="WeekRepository.cs" />
   </ItemGroup>
   <ItemGroup>
