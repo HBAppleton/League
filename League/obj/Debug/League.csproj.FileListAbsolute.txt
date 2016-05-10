@@ -80,3 +80,13 @@ E:\Training\League\League\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Training\League\League\obj\Debug\League.dll
 E:\Training\League\League\obj\Debug\League.pdb
 E:\Training\League\League\obj\Debug\League.csprojResolveAssemblyReference.cache
+E:\Training\League\League\bin\Autofac.dll
+E:\Training\League\League\bin\Autofac.Integration.Mvc.dll
+E:\Training\League\League\bin\League.Model.dll
+E:\Training\League\League\bin\League.Repository.dll
+E:\Training\League\League\bin\League.Service.dll
+E:\Training\League\League\bin\League.Model.pdb
+E:\Training\League\League\bin\League.Repository.pdb
+E:\Training\League\League\bin\League.Service.pdb
+E:\Training\League\League\bin\Autofac.xml
+E:\Training\League\League\bin\Autofac.Integration.Mvc.xml
