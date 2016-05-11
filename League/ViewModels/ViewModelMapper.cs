@@ -191,5 +191,29 @@ namespace League.ViewModels
 
             return teamnote;
         }
+
+        public WeekViewModel WeekToVM(Week week)
+        {
+            WeekViewModel vm = new WeekViewModel();
+
+            vm.Id = week.Id;
+            vm.WeekDate = week.WeekDate;
+            vm.WeekNumber = week.WeekNumber;
+            vm.Season = week.Season;
+
+            return vm;
+        }
+
+        public Week WeekFromVM(WeekViewModel vm)
+        {
+            Week week = new Week();
+
+            week.Id = vm.Id;
+            week.WeekDate = vm.WeekDate;
+            week.WeekNumber = vm.WeekNumber;
+            week.Season = vm.Season;
+
+            return week;
+        }
     }
 }
