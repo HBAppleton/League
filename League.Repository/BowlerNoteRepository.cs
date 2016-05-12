@@ -24,6 +24,11 @@ namespace League.Repository
             return FindBy(n => n.Id == Id).FirstOrDefault();
         }
 
+        public IEnumerable<Bowlernote> GetActive()
+        {
+            return _entities.Set<Bowlernote>().Where(n => n.Season == DateTime.Today.Year).AsEnumerable();
+        }
+
         public IEnumerable<Bowlernote> GetByBowlerId(long BowlerId)
         {
             return _entities.Set<Bowlernote>().Where(n => n.BowlerId == BowlerId).AsEnumerable();

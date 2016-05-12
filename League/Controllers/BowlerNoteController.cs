@@ -23,7 +23,7 @@ namespace League.Controllers
         // GET: /BowlerNote
         public ActionResult Index()
         {
-            return View(_BowlerNoteService.GetAll());
+            return View(_BowlerNoteService.GetActive());
         }
 
         // GET: /BowlerNote/Details
@@ -46,7 +46,7 @@ namespace League.Controllers
         // GET: /BowlerNote/Create
         public ActionResult Create()
         {
-            ViewBag.BowlerId = new SelectList(_BowlerService.GetAll(), "Id", "BowlerName");
+            ViewBag.BowlerId = new SelectList(_BowlerService.GetActive(), "Id", "BowlerName");
             return View();
         }
 

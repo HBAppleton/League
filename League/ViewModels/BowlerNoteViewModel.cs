@@ -14,3 +14,4 @@ namespace League.ViewModels
         public string Note { get; set; } // note
         public int? Rank { get; set; } // rank    }
     }
+}

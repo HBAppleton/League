@@ -12,5 +12,6 @@ namespace League.Repository
         Draw GetById(long id);
 
         IEnumerable<Draw> GetByWeekId(long id);
+        IEnumerable<Draw> GetActive();
     }
 }

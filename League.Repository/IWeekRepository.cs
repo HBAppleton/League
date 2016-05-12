@@ -12,5 +12,6 @@ namespace League.Repository
         Week GetById(long Id);
 
         IEnumerable<Week> GetBySeason(int Season);
+        IEnumerable<Week> GetActive();
     }
 }

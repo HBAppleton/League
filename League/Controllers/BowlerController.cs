@@ -47,7 +47,7 @@ namespace League.Controllers
         // GET: /Bowler/Create
         public ActionResult Create()
         {
-            ViewBag.TeamId = new SelectList(_TeamService.GetAll(), "Id", "TeamName");
+            ViewBag.TeamId = new SelectList(_TeamService.GetActive(), "Id", "TeamName");
             return View();
         }
 

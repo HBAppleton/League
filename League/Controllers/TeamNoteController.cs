@@ -22,7 +22,7 @@ namespace League.Controllers
         // GET: TeamNote
         public ActionResult Index()
         {
-            return View(_TeamNoteService.GetAll());
+            return View(_TeamNoteService.GetActive());
         }
 
         // GET: /TeamNote/Details
@@ -45,7 +45,7 @@ namespace League.Controllers
         // GET: /TeamNote/Create
         public ActionResult Create()
         {
-            ViewBag.TeamId = new SelectList(_TeamService.GetAll(), "Id", "TeamName");
+            ViewBag.TeamId = new SelectList(_TeamService.GetActive(), "Id", "TeamName");
             return View();
         }
 

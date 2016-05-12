@@ -34,5 +34,10 @@ namespace League.Repository
         {
             return _entities.Set<Teamnote>().Where(t => t.TeamId == TeamId).Where(t => t.Season == Season).AsEnumerable();
         }
+
+        public IEnumerable<Teamnote> GetActive()
+        {
+            return _entities.Set<Teamnote>().Where(t => t.Season == DateTime.Today.Year).AsEnumerable();
+        }
     }
 }

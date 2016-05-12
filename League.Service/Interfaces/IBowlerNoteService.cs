@@ -1,5 +1,6 @@
 ﻿using League.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace League.Service.Interfaces
     public interface IBowlerNoteService : IEntityService<Bowlernote>
     {
         Bowlernote GetById(long Id);
+
+        IEnumerable GetActive();
     }
 }
 

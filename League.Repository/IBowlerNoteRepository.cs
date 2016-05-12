@@ -11,6 +11,7 @@ namespace League.Repository
     {
         Bowlernote GetById(long Id);
 
+        IEnumerable<Bowlernote> GetActive();
         IEnumerable<Bowlernote> GetByBowlerId(long BowlerId);
         IEnumerable<Bowlernote> GetByBowlerSeason(long BowlerId, int Season);
     }

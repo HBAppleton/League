@@ -47,7 +47,7 @@ namespace League.Controllers
         // GET: Scoresheet/Create
         public ActionResult Create()
         {
-            ViewBag.BowlerId = new SelectList(_BowlerService.GetAll(), "Id", "BowlerName");
+            ViewBag.BowlerId = new SelectList(_BowlerService.GetActive(), "Id", "BowlerName");
             return View();
         }
 

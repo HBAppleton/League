@@ -2,6 +2,7 @@
 using League.Repository;
 using League.Service.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace League.Service.Services
         public Week GetById(long Id)
         {
             return _weekRepository.GetById(Id);
+        }
+
+        public IEnumerable GetBySeason(int Season)
+        {
+            return _weekRepository.GetBySeason(Season);
+        }
+
+        public IEnumerable GetActive()
+        {
+            return _weekRepository.GetActive();
         }
     }
 }

@@ -11,6 +11,7 @@ namespace League.Repository
     {
         Teamnote GetById(long Id);
 
+        IEnumerable<Teamnote> GetActive();
         IEnumerable<Teamnote> GetByTeamId(long TeamId);
         IEnumerable<Teamnote> GetByTeamSeason(long TeamId, int Season);
     }

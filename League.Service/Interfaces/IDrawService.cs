@@ -1,5 +1,6 @@
 ﻿using League.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,8 @@ namespace League.Service.Interfaces
     public interface IDrawService : IEntityService<Draw>
     {
         Draw GetById(long Id);
+
+        IEnumerable GetByWeekId(long WeekId);
+        IEnumerable GetActive();
     }
 }

@@ -24,7 +24,7 @@ namespace League.Controllers
         // GET: Draw
         public ActionResult Index()
         {
-            return View(_DrawService.GetAll());
+            return View(_DrawService.GetActive());
         }
 
         // GET: /Draw/Detail
@@ -47,8 +47,8 @@ namespace League.Controllers
         // GET: /Draw/Create
         public ActionResult Create()
         {
-            ViewBag.WeekId = new SelectList(_WeekService.GetAll(), "Id", "WeekDate");
-            ViewBag.TeamId = new SelectList(_TeamService.GetAll(), "Id", "TeamName");
+            ViewBag.WeekId = new SelectList(_WeekService.GetActive(), "Id", "WeekDate");
+            ViewBag.TeamId = new SelectList(_TeamService.GetActive(), "Id", "TeamName");
             return View();
         }
 

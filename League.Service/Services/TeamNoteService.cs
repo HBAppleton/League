@@ -2,6 +2,7 @@
 using League.Repository;
 using League.Service.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,21 @@ namespace League.Service.Services
         public Teamnote GetById(long Id)
         {
             return _teamNoteRepository.GetById(Id);
+        }
+
+        public IEnumerable GetActive()
+        {
+            return _teamNoteRepository.GetActive();
+        }
+
+        public IEnumerable GetByTeamId(long teamId)
+        {
+            return _teamNoteRepository.GetByTeamId(teamId);
+        }
+
+        public IEnumerable GetByTeamSeason(long teamId, int season)
+        {
+            return _teamNoteRepository.GetByTeamSeason(teamId, season);
         }
     }
 }

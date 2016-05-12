@@ -28,5 +28,19 @@ namespace League.Repository
         {
             return _dbset.Include(w => w.WeekId).Include(t => t.TeamId).Where(d => d.WeekId == id).AsEnumerable(); 
         }
+
+        public IEnumerable<Draw> GetActive ()
+        {
+            MyDbContext db = new MyDbContext();
+            var query = (
+                         from d in db.Draws
+                         join w in db.Weeks on d.WeekId equals w.Id
+                         where w.Season == DateTime.Today.Year
+                         orderby d.WeekId, d.Lane
+                         select d
+                        );
+
+            return query;
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace League.Controllers
         // GET: /Week
         public ActionResult Index()
         {
-            return View(_WeekService.GetAll());
+            return View(_WeekService.GetActive());
         }
 
         // GET: /Week/Create

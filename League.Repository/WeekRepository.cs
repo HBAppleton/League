@@ -28,5 +28,12 @@ namespace League.Repository
         {
             return _entities.Set<Week>().Where(w => w.Season == Season).AsEnumerable();
         }
+
+        public IEnumerable<Week> GetActive()
+        {
+            DateTime _date = DateTime.Now;
+
+            return GetBySeason(_date.Year);
+        }
     }
 }

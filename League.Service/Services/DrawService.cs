@@ -2,6 +2,7 @@
 using League.Repository;
 using League.Service.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,19 @@ namespace League.Service.Services
             _drawRepository = DrawRepository;
         }
 
-        public Draw GetById(long Id)
+        public Draw GetById(long id)
         {
-            return _drawRepository.GetById(Id);
+            return _drawRepository.GetById(id);
+        }
+
+        public IEnumerable GetByWeekId(long weekId)
+        {
+            return _drawRepository.GetByWeekId(weekId);
+        }
+
+        public IEnumerable GetActive()
+        {
+            return _drawRepository.GetActive();
         }
     }
 }
