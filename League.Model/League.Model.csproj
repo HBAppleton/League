@@ -96,6 +96,11 @@
     <Compile Include="HbaSSeasonAttendanceReturnModel.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="hba_leagueDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hba_leagueDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IEntity.cs" />
     <Compile Include="IMyDbContext.cs">
       <DependentUpon>Database.tt</DependentUpon>
@@ -157,6 +162,17 @@
     <None Include="App.config" />
     <None Include="EF.Reverse.POCO.Core.ttinclude" />
     <None Include="EF.Reverse.POCO.ttinclude" />
+    <None Include="hba_leagueDataSet.xsc">
+      <DependentUpon>hba_leagueDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hba_leagueDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hba_leagueDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hba_leagueDataSet.xss">
+      <DependentUpon>hba_leagueDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AveragesRepository.cs" />
     <Compile Include="BowlerNoteRepository.cs" />
     <Compile Include="BowlerRepository.cs" />
     <Compile Include="DrawRepository.cs" />
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="IAveragesRepository.cs" />
     <Compile Include="IBowlerNoteRepository.cs" />
     <Compile Include="IBowlerRepository.cs" />
     <Compile Include="IDrawRepository.cs" />
