@@ -51,18 +51,18 @@
     <Compile Include="IBowlerRepository.cs" />
     <Compile Include="IDrawRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
+    <Compile Include="IRollingAverageRepository.cs" />
     <Compile Include="IScoreSheetRepository.cs" />
     <Compile Include="ITeamNoteRepository.cs" />
     <Compile Include="ITeamRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
-    <Compile Include="IVDrawRepository.cs" />
     <Compile Include="IWeekRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RollingAverageRespository.cs" />
     <Compile Include="ScoresheetRepository.cs" />
     <Compile Include="TeamNoteRepository.cs" />
     <Compile Include="TeamRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
-    <Compile Include="VDrawRepository.cs" />
     <Compile Include="WeekRepository.cs" />
   </ItemGroup>
   <ItemGroup>

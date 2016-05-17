@@ -22,8 +22,8 @@ namespace League.Model
         System.Data.Entity.DbSet<Scoresheet> Scoresheets { get; set; } // hba_score_sheet
         System.Data.Entity.DbSet<Team> Teams { get; set; } // hba_team
         System.Data.Entity.DbSet<Teamnote> Teamnotes { get; set; } // hba_team_note
-        System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; } // hba_v_draw
         System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; } // hba_v_individual_game
+        System.Data.Entity.DbSet<VRollingAverage> VRollingAverages { get; set; } // hba_v_RollingAverage
         System.Data.Entity.DbSet<Vweek> Vweeks { get; set; } // hba_v_week
         System.Data.Entity.DbSet<Week> Weeks { get; set; } // hba_week
 
@@ -32,7 +32,8 @@ namespace League.Model
         System.Threading.Tasks.Task<int> SaveChangesAsync(System.Threading.CancellationToken cancellationToken);
         
         // Stored Procedures
-        int HbaSAveragesAudit(int? pWeekId);
+        System.Collections.Generic.List<HbaSAveragesAuditReturnModel> HbaSAveragesAudit(int? pWeekId);
+        System.Collections.Generic.List<HbaSAveragesAuditReturnModel> HbaSAveragesAudit(int? pWeekId, out int procResult);
         System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason);
         System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason, out int procResult);
         System.Collections.Generic.List<HbaSRoundWeekIdsReturnModel> HbaSRoundWeekIds(int? pWeekId);

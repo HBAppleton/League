@@ -23,8 +23,8 @@ namespace League.Model
         public System.Data.Entity.DbSet<Scoresheet> Scoresheets { get; set; }
         public System.Data.Entity.DbSet<Team> Teams { get; set; }
         public System.Data.Entity.DbSet<Teamnote> Teamnotes { get; set; }
-        public System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; }
         public System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; }
+        public System.Data.Entity.DbSet<VRollingAverage> VRollingAverages { get; set; }
         public System.Data.Entity.DbSet<Vweek> Vweeks { get; set; }
         public System.Data.Entity.DbSet<Week> Weeks { get; set; }
 
@@ -37,8 +37,8 @@ namespace League.Model
             Scoresheets = new FakeDbSet<Scoresheet>("Id");
             Teams = new FakeDbSet<Team>("Id");
             Teamnotes = new FakeDbSet<Teamnote>("Id");
-            Vdraws = new FakeDbSet<Vdraw>("Season", "DrawId", "WeekId", "TeamId", "TeamName", "Lane", "Pairing", "TeamGame1", "TeamGame2", "TeamGame3", "Series", "Bonus", "Total", "ScoresheetId", "BowlerId", "Position", "BowlerName", "Handicap", "BlindScore", "Game1", "Game2", "Game3");
             Vindividualgames = new FakeDbSet<Vindividualgame>("Season", "WeekNumber", "BowlerId", "Handicap", "Game", "Game1", "DrawId");
+            VRollingAverages = new FakeDbSet<VRollingAverage>("Id");
             Vweeks = new FakeDbSet<Vweek>("Season", "WeekNumber", "Round", "Id");
             Weeks = new FakeDbSet<Week>("Id");
         }
@@ -72,10 +72,17 @@ namespace League.Model
         }
         
         // Stored Procedures
-        public int HbaSAveragesAudit(int? pWeekId)
+        public System.Collections.Generic.List<HbaSAveragesAuditReturnModel> HbaSAveragesAudit(int? pWeekId)
         {
- 
-            return 0;
+            int procResult;
+            return HbaSAveragesAudit(pWeekId, out procResult);
+        }
+
+        public System.Collections.Generic.List<HbaSAveragesAuditReturnModel> HbaSAveragesAudit(int? pWeekId, out int procResult)
+        {
+
+            procResult = 0;
+            return new System.Collections.Generic.List<HbaSAveragesAuditReturnModel>();
         }
 
         public System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason)

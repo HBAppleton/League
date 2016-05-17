@@ -90,3 +90,5 @@ E:\Training\League\League\bin\League.Repository.pdb
 E:\Training\League\League\bin\League.Service.pdb
 E:\Training\League\League\bin\Autofac.xml
 E:\Training\League\League\bin\Autofac.Integration.Mvc.xml
+E:\Training\League\League\bin\MoreLinq.dll
+E:\Training\League\League\bin\MoreLinq.xml

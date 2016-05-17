@@ -40,28 +40,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IAveragesService.cs" />
     <Compile Include="Interfaces\IBowlerNoteService.cs" />
     <Compile Include="Interfaces\IBowlerService.cs" />
     <Compile Include="Interfaces\IDrawService.cs" />
     <Compile Include="Interfaces\IEntityService.cs" />
+    <Compile Include="Interfaces\IRollingAverageService.cs" />
     <Compile Include="Interfaces\IScoresheetService.cs" />
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ITeamNoteService.cs" />
     <Compile Include="Interfaces\ITeamService.cs" />
-    <Compile Include="Interfaces\IVDrawService.cs" />
     <Compile Include="Interfaces\IWeekService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AveragesService.cs" />
     <Compile Include="Services\BowlerNoteService.cs" />
     <Compile Include="Services\BowlerService.cs" />
     <Compile Include="Services\DrawService.cs" />
     <Compile Include="Services\EntityService.cs" />
+    <Compile Include="Services\RollingAverageService.cs" />
     <Compile Include="Services\ScoresheetService.cs" />
     <Compile Include="Services\TeamNoteService.cs" />
     <Compile Include="Services\TeamService.cs" />
-    <Compile Include="Services\VDrawService.cs" />
     <Compile Include="Services\WeekService.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\League.Model\League.Model.csproj">
       <Project>{f79e1f0c-0e9a-4798-9854-bac13ab8f517}</Project>

@@ -25,8 +25,8 @@ namespace League.Model
         public System.Data.Entity.DbSet<Scoresheet> Scoresheets { get; set; } // hba_score_sheet
         public System.Data.Entity.DbSet<Team> Teams { get; set; } // hba_team
         public System.Data.Entity.DbSet<Teamnote> Teamnotes { get; set; } // hba_team_note
-        public System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; } // hba_v_draw
         public System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; } // hba_v_individual_game
+        public System.Data.Entity.DbSet<VRollingAverage> VRollingAverages { get; set; } // hba_v_RollingAverage
         public System.Data.Entity.DbSet<Vweek> Vweeks { get; set; } // hba_v_week
         public System.Data.Entity.DbSet<Week> Weeks { get; set; } // hba_week
         
@@ -85,8 +85,8 @@ namespace League.Model
             modelBuilder.Configurations.Add(new ScoresheetConfiguration());
             modelBuilder.Configurations.Add(new TeamConfiguration());
             modelBuilder.Configurations.Add(new TeamnoteConfiguration());
-            modelBuilder.Configurations.Add(new VdrawConfiguration());
             modelBuilder.Configurations.Add(new VindividualgameConfiguration());
+            modelBuilder.Configurations.Add(new VRollingAverageConfiguration());
             modelBuilder.Configurations.Add(new VweekConfiguration());
             modelBuilder.Configurations.Add(new WeekConfiguration());
         }
@@ -100,25 +100,31 @@ namespace League.Model
             modelBuilder.Configurations.Add(new ScoresheetConfiguration(schema));
             modelBuilder.Configurations.Add(new TeamConfiguration(schema));
             modelBuilder.Configurations.Add(new TeamnoteConfiguration(schema));
-            modelBuilder.Configurations.Add(new VdrawConfiguration(schema));
             modelBuilder.Configurations.Add(new VindividualgameConfiguration(schema));
+            modelBuilder.Configurations.Add(new VRollingAverageConfiguration(schema));
             modelBuilder.Configurations.Add(new VweekConfiguration(schema));
             modelBuilder.Configurations.Add(new WeekConfiguration(schema));
             return modelBuilder;
         }
         
         // Stored Procedures
-        public int HbaSAveragesAudit(int? pWeekId)
+        public System.Collections.Generic.List<HbaSAveragesAuditReturnModel> HbaSAveragesAudit(int? pWeekId)
+        {
+            int procResult;
+            return HbaSAveragesAudit(pWeekId, out procResult);
+        }
+
+        public System.Collections.Generic.List<HbaSAveragesAuditReturnModel> HbaSAveragesAudit(int? pWeekId, out int procResult)
         {
             var pWeekIdParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@p_week_id", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Input, Value = pWeekId.GetValueOrDefault(), Precision = 10, Scale = 0 };
             if (!pWeekId.HasValue)
                 pWeekIdParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
- 
-            Database.ExecuteSqlCommand("EXEC @procResult = [dbo].[hba_s_averages_audit] @p_week_id", pWeekIdParam, procResultParam);
- 
-            return (int) procResultParam.Value;
+            var procResultData = Database.SqlQuery<HbaSAveragesAuditReturnModel>("EXEC @procResult = [dbo].[hba_s_averages_audit] @p_week_id", pWeekIdParam, procResultParam).ToList();
+
+            procResult = (int) procResultParam.Value;
+            return procResultData;
         }
 
         public System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason)
