@@ -5,3 +5,5 @@ E:\Training\League\League.Repository\obj\Debug\League.Repository.pdb
 E:\Training\League\League.Repository\obj\Debug\League.Repository.csprojResolveAssemblyReference.cache
 E:\Training\League\League.Repository\bin\Debug\League.Model.dll
 E:\Training\League\League.Repository\bin\Debug\League.Model.pdb
+E:\Training\League\League.Repository\bin\Debug\League.Repository.dll.CodeAnalysisLog.xml
+E:\Training\League\League.Repository\bin\Debug\League.Repository.dll.lastcodeanalysissucceeded

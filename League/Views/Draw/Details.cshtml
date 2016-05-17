@@ -1,0 +1,106 @@
+﻿@model League.Model.Draw
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Draw</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeekId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeekId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lane)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lane)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pairing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pairing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Game1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Game2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Game3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Series)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Series)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bonus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bonus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LegalLineup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LegalLineup)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

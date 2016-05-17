@@ -1,0 +1,74 @@
+﻿@model League.Model.Scoresheet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Scoresheet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BowlerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BowlerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrawId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrawId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlindScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlindScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Handicap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Handicap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Game1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Game2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Game3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

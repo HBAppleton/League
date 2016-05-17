@@ -92,3 +92,5 @@ E:\Training\League\League\bin\Autofac.xml
 E:\Training\League\League\bin\Autofac.Integration.Mvc.xml
 E:\Training\League\League\bin\MoreLinq.dll
 E:\Training\League\League\bin\MoreLinq.xml
+E:\Training\League\League\bin\League.dll.CodeAnalysisLog.xml
+E:\Training\League\League\bin\League.dll.lastcodeanalysissucceeded

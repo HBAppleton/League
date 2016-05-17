@@ -7,4 +7,5 @@ E:\Training\League\League.Model\bin\Debug\EntityFramework.xml
 E:\Training\League\League.Model\bin\Debug\EntityFramework.SqlServer.xml
 E:\Training\League\League.Model\obj\Debug\League.Model.dll
 E:\Training\League\League.Model\obj\Debug\League.Model.pdb
-E:\Training\League\League.Model\obj\Debug\League.Model.csprojResolveAssemblyReference.cache
+E:\Training\League\League.Model\bin\Debug\League.Model.dll.CodeAnalysisLog.xml
+E:\Training\League\League.Model\bin\Debug\League.Model.dll.lastcodeanalysissucceeded

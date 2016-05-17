@@ -1,0 +1,42 @@
+﻿@model League.Model.Week
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Week Details</h2>
+
+<div>
+    <h4>Week</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WeekDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeekDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeekNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeekNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Active")
+</p>
