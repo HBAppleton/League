@@ -9,5 +9,3 @@ E:\Training\League\League.Service\bin\Debug\EntityFramework.dll
 E:\Training\League\League.Service\bin\Debug\League.Model.pdb
 E:\Training\League\League.Service\bin\Debug\League.Repository.pdb
 E:\Training\League\League.Service\bin\Debug\EntityFramework.xml
-E:\Training\League\League.Service\bin\Debug\League.Service.dll.CodeAnalysisLog.xml
-E:\Training\League\League.Service\bin\Debug\League.Service.dll.lastcodeanalysissucceeded

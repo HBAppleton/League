@@ -16,8 +16,8 @@ namespace League.Modules
         {
             builder.RegisterModule(new RepositoryModule());
 
-            builder.RegisterType(typeof(MyDbContext)).As(typeof(DbContext)).InstancePerLifetimeScope();
-            builder.RegisterType(typeof(UnitOfWork)).InstancePerRequest();
+            builder.RegisterType(typeof(MyDbContext)).As(typeof(MyDbContext)).InstancePerLifetimeScope();
+            builder.RegisterType(typeof(UnitOfWork)).As(typeof(IUnitOfWork)).InstancePerRequest();
         }
     }
 }

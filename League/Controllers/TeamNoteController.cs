@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using League.Model;
-using League.Service.Interfaces;
+using League.Service;
 using System.Net;
 
 namespace League.Controllers

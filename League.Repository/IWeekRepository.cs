@@ -9,9 +9,9 @@ namespace League.Repository
 {
     public interface IWeekRepository : IGenericRepository<Week>
     {
-        Week GetById(long Id);
+        Week GetById(long id);
 
-        IEnumerable<Week> GetBySeason(int Season);
+        IEnumerable<Week> GetBySeason(int season);
         IEnumerable<Week> GetActive();
     }
 }

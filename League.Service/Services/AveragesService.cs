@@ -1,6 +1,6 @@
 ﻿using League.Model;
 using League.Repository;
-using League.Service.Interfaces;
+using League.Service;
 using System;
 using System.Collections;
 using System.Collections.Generic;

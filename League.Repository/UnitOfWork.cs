@@ -10,9 +10,9 @@ namespace League.Repository
 {
     public sealed class UnitOfWork : IUnitOfWork
     {
-        private DbContext _dbContext;
+        private MyDbContext _dbContext;
 
-        public UnitOfWork(DbContext context)
+        public UnitOfWork(MyDbContext context)
         {
             _dbContext = context;
         }

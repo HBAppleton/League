@@ -1,13 +1,12 @@
 ﻿using League.Model;
 using League.Repository;
-using League.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace League.Service.Services
+namespace League.Service
 {
     public abstract class EntityService<T> : IEntityService<T> where T : BaseEntity 
     {

@@ -19,14 +19,14 @@ namespace League.Repository
             return _entities.Set<Week>().AsEnumerable();
         }
 
-        public Week GetById(long Id)
+        public Week GetById(long id)
         {
-            return FindBy(w => w.Id == Id).FirstOrDefault();
+            return FindBy(w => w.Id == id).FirstOrDefault();
         }
 
-        public IEnumerable<Week> GetBySeason(int Season)
+        public IEnumerable<Week> GetBySeason(int season)
         {
-            return _entities.Set<Week>().Where(w => w.Season == Season).AsEnumerable();
+            return _entities.Set<Week>().Where(w => w.Season == season).AsEnumerable();
         }
 
         public IEnumerable<Week> GetActive()

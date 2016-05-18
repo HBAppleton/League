@@ -1,5 +1,4 @@
 ﻿using League.Model;
-using League.Service.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace League.Service.Interfaces
+namespace League.Service
 {
     public interface IAveragesService : IEntityService<Average>
     {

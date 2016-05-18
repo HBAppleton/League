@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using League.Model;
-using League.Service.Interfaces;
+using League.Service;
 using System.Net;
 
 namespace League.Controllers
@@ -12,17 +12,23 @@ namespace League.Controllers
     public class WeekController : Controller
     {
         // Initialise SERVICE object 
-        IWeekService _WeekService;
+        IWeekService _weekService;
 
-        public WeekController(IWeekService WeekService)
+        public WeekController(IWeekService weekService)
         {
-            _WeekService = WeekService;
+            _weekService = weekService;
         }
 
         // GET: /Week
         public ActionResult Index()
         {
-            return View(_WeekService.GetActive());
+            return View(_weekService.GetAll());
+        }
+
+        // GET: /Week
+        public ActionResult Active()
+        {
+            return View(_weekService.GetActive());
         }
 
         // GET: /Week/Create
@@ -39,8 +45,8 @@ namespace League.Controllers
             // TODO: Add insert logic here
             if (ModelState.IsValid)
             {
-                _WeekService.Create(week);
-                return RedirectToAction("Index");
+                _weekService.Create(week);
+                return RedirectToAction("Active");
             }
             return View(week);
         }
@@ -53,7 +59,7 @@ namespace League.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Week week = _WeekService.GetById(id.Value);
+            Week week = _weekService.GetById(id.Value);
             if (week == null)
             {
                 return HttpNotFound();
@@ -67,8 +73,8 @@ namespace League.Controllers
         {
             if (ModelState.IsValid)
             {
-                _WeekService.Update(week);
-                return RedirectToAction("Index");
+                _weekService.Update(week);
+                return RedirectToAction("Active");
             }
             return View(week);
         }
@@ -81,7 +87,7 @@ namespace League.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Week week = _WeekService.GetById(id.Value);
+            Week week = _weekService.GetById(id.Value);
             if (week == null)
             {
                 return HttpNotFound();
@@ -94,9 +100,9 @@ namespace League.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(long id, FormCollection data)
         {
-            Week week = _WeekService.GetById(id);
-            _WeekService.Delete(week);
-            return RedirectToAction("Index");
+            Week week = _weekService.GetById(id);
+            _weekService.Delete(week);
+            return RedirectToAction("Active");
         }
     }
 }
