@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Interfaces\ITeamNoteService.cs" />
     <Compile Include="Interfaces\ITeamService.cs" />
+    <Compile Include="Interfaces\IVWeekService.cs" />
     <Compile Include="Interfaces\IWeekService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AveragesService.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Services\ScoresheetService.cs" />
     <Compile Include="Services\TeamNoteService.cs" />
     <Compile Include="Services\TeamService.cs" />
+    <Compile Include="Services\VWeekService.cs" />
     <Compile Include="Services\WeekService.cs" />
   </ItemGroup>
   <ItemGroup>

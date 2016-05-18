@@ -7,7 +7,7 @@
 <h2>Weeks</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create Season", "Create")
 </p>
 <table class="table table-bordered">
     <tr>
@@ -15,12 +15,11 @@
             Date
         </th>
         <th>
-            Week Number
-        </th>
-        <th>
             Season
         </th>
-        <th></th>
+        <th>
+            Week Number
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -30,13 +29,10 @@
                 @Html.DisplayFor(modelItem => item.WeekDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.WeekNumber)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Season)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.Id })
+                @Html.DisplayFor(modelItem => item.WeekNumber)
             </td>
         </tr>
     }

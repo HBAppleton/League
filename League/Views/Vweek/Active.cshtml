@@ -1,0 +1,51 @@
+﻿@model IEnumerable<League.Model.Vweek>
+
+@{
+    ViewBag.Title = "Active";
+}
+
+<h2>Current Season</h2>
+
+<p>
+    @Html.ActionLink("Create Season", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WeekDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Season)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeekNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoundWeek)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeekDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Season)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeekNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoundWeek)
+        </td>
+    </tr>
+}
+
+</table>

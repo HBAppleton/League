@@ -25,12 +25,12 @@ namespace League.Service
             return _weekRepository.GetById(id);
         }
 
-        public IEnumerable GetBySeason(int season)
+        public IEnumerable<Week> GetBySeason(int season)
         {
             return _weekRepository.GetBySeason(season);
         }
 
-        public IEnumerable GetActive()
+        public IEnumerable<Week> GetActive()
         {
             return _weekRepository.GetActive();
         }

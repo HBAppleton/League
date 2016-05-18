@@ -11,7 +11,7 @@ namespace League.Service
     public interface IWeekService : IEntityService<Week>
     {
         Week GetById(long Id);
-        IEnumerable GetBySeason(int Season);
-        IEnumerable GetActive();
+        IEnumerable<Week> GetBySeason(int Season);
+        IEnumerable<Week> GetActive();
     }
 }
