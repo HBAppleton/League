@@ -23,17 +23,17 @@ namespace League.Repository
 
         public override IEnumerable<Bowler> GetAll()
         {
-            return _entities.Set<Bowler>().Include(t => t.TeamId).AsEnumerable();
+            return _entities.Set<Bowler>().Include(t => t.TeamId).OrderByDescending(b=>b.ActiveFlag).ThenBy(b=>b.BowlerName).AsEnumerable();
         }
 
         public IEnumerable<Bowler> GetActive()
         {
-            return _entities.Set<Bowler>().Include(t => t.TeamId).Where(b => b.ActiveFlag == "Y").AsEnumerable();
+            return _entities.Set<Bowler>().Include(t => t.TeamId).Where(b => b.ActiveFlag == "Y").OrderBy(b=>b.BowlerName).AsEnumerable();
         }
 
         public IEnumerable<Bowler> GetByTeamId (long Id)
         {
-            return _entities.Set<Bowler>().Include(t => t.TeamId).Where(b => b.TeamId == Id).AsEnumerable();
+            return _entities.Set<Bowler>().Include(t => t.TeamId).Where(b => b.TeamId == Id).OrderBy(b=>b.Position).AsEnumerable();
         }
     }
 }

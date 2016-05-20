@@ -1,5 +1,6 @@
 ﻿using League.Model;
 using League.Service;
+using League.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +28,19 @@ namespace League.Controllers
         // GET: /Week
         public ActionResult Active()
         {
-            return View(_vweekService.GetActive());
-        }
+            ViewModelMapper mapper = new ViewModelMapper();
 
+            IEnumerable<Vweek> vweek = _vweekService.GetActive();
+
+            List<VweekViewModel> vmList = new List<VweekViewModel>();
+
+            foreach(var week in vweek)
+            {
+                VweekViewModel vm = mapper.VweektoVM(week);
+                vmList.Add(vm);
+            }
+
+            return View(vmList);
+        }
     }
 }

@@ -16,12 +16,12 @@ namespace League.Repository
 
         public override IEnumerable<Team> GetAll()
         {
-            return _entities.Set<Team>().AsEnumerable();
+            return _entities.Set<Team>().OrderByDescending(t=>t.ActiveFlag).ThenBy(t=>t.TeamName).AsEnumerable();
         }
 
         public IEnumerable<Team> GetActive()
         {
-            return _entities.Set<Team>().Where(t => t.ActiveFlag == "Y").AsEnumerable();
+            return _entities.Set<Team>().Where(t => t.ActiveFlag == "Y").OrderBy(t=>t.TeamName).AsEnumerable();
         }
 
         public Team GetById(long Id)
