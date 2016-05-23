@@ -11,6 +11,6 @@ namespace League.Service
     public interface ITeamService : IEntityService<Team>
     {
         Team GetById(long Id);
-        IEnumerable GetActive();
+        IEnumerable<Team> GetActive();
     }
 }

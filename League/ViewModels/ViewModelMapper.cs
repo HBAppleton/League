@@ -8,7 +8,7 @@ namespace League.ViewModels
 {
     public class ViewModelMapper
     {
-        public BowlerViewModel BowlerToVM(Bowler bowler)
+        public static BowlerViewModel BowlerToVM(Bowler bowler)
         {
             BowlerViewModel vm = new BowlerViewModel();
 
@@ -26,7 +26,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Bowler BowlerFromVM(BowlerViewModel vm)
+        public static Bowler BowlerFromVM(BowlerViewModel vm)
         {
             Bowler bowler = new Bowler();
 
@@ -44,7 +44,7 @@ namespace League.ViewModels
             return bowler;
         }
 
-        public BowlerNoteViewModel BowlerNoteToMV(Bowlernote bowlernote)
+        public static BowlerNoteViewModel BowlerNoteToMV(Bowlernote bowlernote)
         {
             BowlerNoteViewModel vm = new BowlerNoteViewModel();
 
@@ -57,7 +57,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Bowlernote BowlerNoteFromVM(BowlerNoteViewModel vm)
+        public static Bowlernote BowlerNoteFromVM(BowlerNoteViewModel vm)
         {
             Bowlernote bowlernote = new Bowlernote();
 
@@ -70,7 +70,7 @@ namespace League.ViewModels
             return bowlernote;
         }
 
-        public DrawViewModel DrawToVM(Draw draw)
+        public static DrawViewModel DrawToVM(Draw draw)
         {
             DrawViewModel vm = new DrawViewModel();
 
@@ -90,7 +90,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Draw DrawFromVM(DrawViewModel vm)
+        public static Draw DrawFromVM(DrawViewModel vm)
         {
             Draw draw = new Draw();
 
@@ -110,7 +110,7 @@ namespace League.ViewModels
             return draw;
         }
 
-        public ScoresheetViewModel ScoresheetToVM(Scoresheet scoresheet)
+        public static ScoresheetViewModel ScoresheetToVM(Scoresheet scoresheet)
         {
             ScoresheetViewModel vm = new ScoresheetViewModel();
 
@@ -126,7 +126,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Scoresheet ScoresheetFromVM(ScoresheetViewModel vm)
+        public static Scoresheet ScoresheetFromVM(ScoresheetViewModel vm)
         {
             Scoresheet scoresheet = new Scoresheet();
 
@@ -142,7 +142,7 @@ namespace League.ViewModels
             return scoresheet;
         }
 
-        public TeamViewModel TeamToVM(Team team)
+        public static TeamViewModel TeamToVM(Team team)
         {
             TeamViewModel vm = new TeamViewModel();
 
@@ -154,7 +154,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Team TeamFromVM(TeamViewModel vm)
+        public static Team TeamFromVM(TeamViewModel vm)
         {
             Team team = new Team();
 
@@ -166,7 +166,7 @@ namespace League.ViewModels
             return team;
         }
 
-        public TeamNoteViewModel TeamNoteToVM(Teamnote teamnote)
+        public static TeamNoteViewModel TeamNoteToVM(Teamnote teamnote)
         {
             TeamNoteViewModel vm = new TeamNoteViewModel();
 
@@ -179,7 +179,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Teamnote TeamNoteFromVM(TeamNoteViewModel vm)
+        public static Teamnote TeamNoteFromVM(TeamNoteViewModel vm)
         {
             Teamnote teamnote = new Teamnote();
 
@@ -192,7 +192,7 @@ namespace League.ViewModels
             return teamnote;
         }
 
-        public WeekViewModel WeekToVM(Week week)
+        public static WeekViewModel WeekToVM(Week week)
         {
             WeekViewModel vm = new WeekViewModel();
 
@@ -204,7 +204,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Week WeekFromVM(WeekViewModel vm)
+        public static Week WeekFromVM(WeekViewModel vm)
         {
             Week week = new Week();
 
@@ -216,7 +216,7 @@ namespace League.ViewModels
             return week;
         }
 
-        public VweekViewModel VweektoVM(Vweek vweek)
+        public static VweekViewModel VweektoVM(Vweek vweek)
         {
             VweekViewModel vm = new VweekViewModel();
 
@@ -230,7 +230,7 @@ namespace League.ViewModels
             return vm;
         }
 
-        public Vweek VweekFromVM(VweekViewModel vm)
+        public static Vweek VweekFromVM(VweekViewModel vm)
         {
             Vweek vweek = new Vweek();
 

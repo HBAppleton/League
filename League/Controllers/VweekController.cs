@@ -28,15 +28,12 @@ namespace League.Controllers
         // GET: /Week
         public ActionResult Active()
         {
-            ViewModelMapper mapper = new ViewModelMapper();
-
-            IEnumerable<Vweek> vweek = _vweekService.GetActive();
-
             List<VweekViewModel> vmList = new List<VweekViewModel>();
 
+            IEnumerable<Vweek> vweek = _vweekService.GetActive();
             foreach(var week in vweek)
             {
-                VweekViewModel vm = mapper.VweektoVM(week);
+                VweekViewModel vm = ViewModelMapper.VweektoVM(week);
                 vmList.Add(vm);
             }
 

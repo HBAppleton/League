@@ -25,7 +25,7 @@ namespace League.Service
             return _TeamRepository.GetById(Id);
         }
 
-        public IEnumerable GetActive()
+        public IEnumerable<Team> GetActive()
         {
             return _TeamRepository.GetActive();
         }

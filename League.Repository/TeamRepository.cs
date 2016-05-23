@@ -11,7 +11,6 @@ namespace League.Repository
     {
         public TeamRepository(MyDbContext context) : base(context)
         {
-
         }
 
         public override IEnumerable<Team> GetAll()
@@ -24,9 +23,16 @@ namespace League.Repository
             return _entities.Set<Team>().Where(t => t.ActiveFlag == "Y").OrderBy(t=>t.TeamName).AsEnumerable();
         }
 
-        public Team GetById(long Id)
+        public Team GetById(long id)
         {
-            return _dbset.Where(t => t.Id == Id).FirstOrDefault();
+            return _dbset.Where(t => t.Id == id).FirstOrDefault();
+        }
+
+        public string GetName(long id)
+        {
+            Team team = GetById(id);
+
+            return team.TeamName;
         }
 
     }

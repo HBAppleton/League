@@ -9,7 +9,9 @@ namespace League.Repository
 {
     public interface ITeamRepository : IGenericRepository<Team>
     {
-        Team GetById(long Id);
+        Team   GetById(long id);
+        string GetName(long id);
+
 
         IEnumerable<Team> GetActive();
     }
