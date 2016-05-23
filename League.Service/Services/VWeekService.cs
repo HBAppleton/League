@@ -47,20 +47,5 @@ namespace League.Service
             return ldt_start;
         }
 
-        public DateTime GetSeasonFieldaysDate(int year)
-        {
-            DayOfWeek li_dow = DayOfWeek.Wednesday;
-            int li_month = 6; // June
-            int li_x = 2;     // 2nd week
-
-            if (year == 2016)
-            {
-                li_x = 3; 
-            }
-
-            DateTime ldt_start = DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
-
-            return ldt_start;
-        }
     }
 }

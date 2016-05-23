@@ -14,6 +14,5 @@ namespace League.Service
         IEnumerable<Vweek> GetActive();
 
         DateTime GetSeasonStartDate(int year);
-        DateTime GetSeasonFieldaysDate(int year);
     }
 }

@@ -46,9 +46,7 @@ namespace League.Service
             DateTime ldt_weekdate = DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
 
             // Get Fieldays date as week to be skipped
-            li_month = 6; // June
-            li_x = 2;     // 2nd week            
-            DateTime ldt_fieldays = DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
+            DateTime ldt_fieldays = DateHelper.GetFieldaysStartDate(year);
 
             // create an entry for 39 weeks (4x9wk Rounds, 3wkFinals)
             for (int li_weekNumber = 1; li_weekNumber <= 39; li_weekNumber++)

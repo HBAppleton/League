@@ -39,5 +39,20 @@ namespace League.Helper
 
             return ldt_xDay;
         }
+
+        public static DateTime GetFieldaysStartDate(int year)
+        {
+            DayOfWeek li_dow = DayOfWeek.Wednesday;
+
+            int li_month = 6; // June
+            int li_x = 2;     // 2nd week    
+            
+            if (year == 2016)
+            {
+                li_x = 3;  
+            }
+
+            return DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
+        }
     }
 }
