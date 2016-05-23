@@ -35,6 +35,23 @@ namespace League.Controllers
             return View(vmList);
         }
 
+        public ActionResult Details(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Team team = _teamService.GetById(id.Value);
+            if (team == null)
+            {
+                return HttpNotFound();
+            }
+
+            TeamViewModel vm = ViewModelMapper.TeamToVM(team);
+            return View(vm);
+        }
+
         // GET: /Team/Create
         public ActionResult Create()
         {

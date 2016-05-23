@@ -1,4 +1,4 @@
-﻿@model League.Model.Bowler
+﻿@model League.ViewModels.BowlerViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -32,6 +32,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
         </dd>
 
         <dt>
@@ -72,14 +80,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Position)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
         </dd>
 
     </dl>

@@ -13,5 +13,7 @@ namespace League.Service
         Week GetById(long Id);
         IEnumerable<Week> GetBySeason(int Season);
         IEnumerable<Week> GetActive();
+
+        IEnumerable<Week> SetupSeason(int year);
     }
 }

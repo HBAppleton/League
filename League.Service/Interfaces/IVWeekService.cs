@@ -12,5 +12,8 @@ namespace League.Service
         Vweek GetById(long Id);
         IEnumerable<Vweek> GetBySeason(int Season);
         IEnumerable<Vweek> GetActive();
+
+        DateTime GetSeasonStartDate(int year);
+        DateTime GetSeasonFieldaysDate(int year);
     }
 }

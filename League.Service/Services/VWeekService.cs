@@ -1,5 +1,6 @@
 ﻿using League.Model;
 using League.Repository;
+using League.Helper;
 using System;
 using System.Collections; 
 using System.Collections.Generic;
@@ -33,6 +34,33 @@ namespace League.Service
         public IEnumerable<Vweek> GetActive()
         {
             return _vweekRepository.GetActive();
+        }
+
+        public DateTime GetSeasonStartDate(int year)
+        {
+            DayOfWeek li_dow = DayOfWeek.Wednesday;
+            int li_month = 2; // February
+            int li_x = 4;     // 4th week
+
+            DateTime ldt_start = DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
+
+            return ldt_start;
+        }
+
+        public DateTime GetSeasonFieldaysDate(int year)
+        {
+            DayOfWeek li_dow = DayOfWeek.Wednesday;
+            int li_month = 6; // June
+            int li_x = 2;     // 2nd week
+
+            if (year == 2016)
+            {
+                li_x = 3; 
+            }
+
+            DateTime ldt_start = DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
+
+            return ldt_start;
         }
     }
 }

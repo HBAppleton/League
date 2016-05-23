@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using League.Model;
 using League.Service;
+using League.ViewModels;
 using System.Net;
 
 namespace League.Controllers
@@ -41,7 +42,9 @@ namespace League.Controllers
                 return HttpNotFound();
             }
 
-            return View(bowler);
+            BowlerViewModel vm = ViewModelMapper.BowlerToVM(bowler);
+
+            return View(vm);
         }
 
         // GET: /Bowler/Create

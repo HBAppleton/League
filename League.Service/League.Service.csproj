@@ -66,6 +66,10 @@
     <Compile Include="Services\WeekService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\League.Helper\League.Helper.csproj">
+      <Project>{0979e200-dac7-474b-bc81-5a1611372d6a}</Project>
+      <Name>League.Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\League.Model\League.Model.csproj">
       <Project>{f79e1f0c-0e9a-4798-9854-bac13ab8f517}</Project>
       <Name>League.Model</Name>
