@@ -54,5 +54,15 @@ namespace League.Helper
 
             return DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
         }
+
+        public static DateTime GetLeagueFirstNight(int year)
+        {
+            DayOfWeek li_dow = DayOfWeek.Wednesday;
+
+            int li_month = 2; // February
+            int li_x = 4;     // 4th week    
+
+            return DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
+        }
     }
 }

@@ -36,39 +36,53 @@ namespace League.Service
             return _weekRepository.GetActive();
         }
 
-        public IEnumerable<Week> SetupSeason(int year)
+        public void SetupSeason(int year)
         {
-            DayOfWeek li_dow = DayOfWeek.Wednesday;
-
-            // Get Season Start
-            int li_month = 2; // February
-            int li_x = 4;     // 4th week            
-            DateTime ldt_weekdate = DateHelper.XthDayOfWeekInMonth(year, li_month, li_dow, li_x);
-
-            // Get Fieldays date as week to be skipped
-            DateTime ldt_fieldays = DateHelper.GetFieldaysStartDate(year);
-
-            // create an entry for 39 weeks (4x9wk Rounds, 3wkFinals)
-            for (int li_weekNumber = 1; li_weekNumber <= 39; li_weekNumber++)
+            if (!DoesSeasonExist(year))
             {
-                // insert new record 
-                Week week = new Week();
-                week.Season = year;
-                week.WeekDate = ldt_weekdate;
-                week.WeekNumber = li_weekNumber;
+                // Get Season Start
+                DateTime ldt_weekdate = DateHelper.GetLeagueFirstNight(year);
 
-                _weekRepository.Add(week);
+                // Get Fieldays date as week to be skipped
+                DateTime ldt_fieldays = DateHelper.GetFieldaysStartDate(year);
 
-                // prepare for next iteration
-                ldt_weekdate = ldt_weekdate.AddDays(7);
-                if (ldt_weekdate == ldt_fieldays)
+                // create an entry for 39 weeks (4x9wk Rounds, 3wkFinals)
+                for (int li_weekNumber = 1; li_weekNumber <= 39; li_weekNumber++)
                 {
-                    // ignore Fieldays - no bowling 
+                    // insert new record 
+                    Week week = new Week();
+                    week.Season = year;
+                    week.WeekDate = ldt_weekdate;
+                    week.WeekNumber = li_weekNumber;
+
+                    _weekRepository.Add(week);
+
+                    // prepare for next iteration
                     ldt_weekdate = ldt_weekdate.AddDays(7);
+                    if (ldt_weekdate == ldt_fieldays)
+                    {
+                        // ignore Fieldays - no bowling 
+                        ldt_weekdate = ldt_weekdate.AddDays(7);
+                    }
                 }
+
+                _weekRepository.Save();
             }
 
-            return GetBySeason(year);
+            return;
+        }
+
+        public Boolean DoesSeasonExist(int year)
+        {
+            Boolean lb_exists = false;
+
+            IEnumerable<Week> week = GetBySeason(year);
+            if (week.Count() > 0)
+            {
+                lb_exists = true;
+            }
+
+            return lb_exists;
         }
     }
 }

@@ -39,5 +39,6 @@ namespace League.Controllers
 
             return View(vmList);
         }
+
     }
 }

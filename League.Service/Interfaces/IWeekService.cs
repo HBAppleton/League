@@ -14,6 +14,6 @@ namespace League.Service
         IEnumerable<Week> GetBySeason(int Season);
         IEnumerable<Week> GetActive();
 
-        IEnumerable<Week> SetupSeason(int year);
+        void SetupSeason(int year);
     }
 }
