@@ -1,5 +1,5 @@
 E:\Training\League\League.Helper\bin\Debug\League.Helper.dll
 E:\Training\League\League.Helper\bin\Debug\League.Helper.pdb
-E:\Training\League\League.Helper\obj\Debug\League.Helper.csprojResolveAssemblyReference.cache
 E:\Training\League\League.Helper\obj\Debug\League.Helper.dll
 E:\Training\League\League.Helper\obj\Debug\League.Helper.pdb
+E:\Training\League\League.Helper\obj\Debug\League.Helper.csprojResolveAssemblyReference.cache

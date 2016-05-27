@@ -16,31 +16,18 @@ namespace League.Repository
 
         public override IEnumerable<Draw> GetAll()
         {
-            return _entities.Set<Draw>().Include(w => w.WeekId).Include(t => t.TeamId).AsEnumerable();
+            return _entities.Set<Draw>().AsEnumerable();
         }
 
         public Draw GetById(long id)
         {
-            return _dbset.Include(w => w.WeekId).Include(t => t.TeamId).Where(d => d.Id == id).FirstOrDefault();
+            return _dbset.Where(d => d.Id == id).FirstOrDefault();
         }
 
-        public IEnumerable<Draw> GetByWeekId(long id)
+        public IEnumerable<Draw> GetByWeekId(long weekid)
         {
-            return _dbset.Include(w => w.WeekId).Include(t => t.TeamId).Where(d => d.WeekId == id).AsEnumerable(); 
+            return _dbset.Where(d => d.WeekId == weekid).AsEnumerable(); 
         }
 
-        public IEnumerable<Draw> GetActive ()
-        {
-            MyDbContext db = new MyDbContext();
-            var query = (
-                         from d in db.Draws
-                         join w in db.Weeks on d.WeekId equals w.Id
-                         where w.Season == DateTime.Today.Year
-                         orderby d.WeekId, d.Lane
-                         select d
-                        );
-
-            return query;
-        }
     }
 }

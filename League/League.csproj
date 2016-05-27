@@ -217,6 +217,7 @@
     <Compile Include="Controllers\SeasonSetupController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\TeamNoteController.cs" />
+    <Compile Include="Controllers\VdrawController.cs" />
     <Compile Include="Controllers\VweekController.cs" />
     <Compile Include="Controllers\WeekController.cs" />
     <Compile Include="Global.asax.cs">
@@ -238,6 +239,7 @@
     <Compile Include="ViewModels\SeasonSetupViewModel.cs" />
     <Compile Include="ViewModels\TeamNoteViewModel.cs" />
     <Compile Include="ViewModels\TeamViewModel.cs" />
+    <Compile Include="ViewModels\VdrawViewModel.cs" />
     <Compile Include="ViewModels\ViewModelMapper.cs" />
     <Compile Include="ViewModels\VweekViewModel.cs" />
     <Compile Include="ViewModels\WeekViewModel.cs" />
@@ -319,7 +321,6 @@
     <Content Include="Views\BowlerNote\Delete.cshtml" />
     <Content Include="Views\BowlerNote\Details.cshtml" />
     <Content Include="Views\BowlerNote\Edit.cshtml" />
-    <Content Include="Views\Draw\Active.cshtml" />
     <Content Include="Views\Draw\Create.cshtml" />
     <Content Include="Views\Draw\Delete.cshtml" />
     <Content Include="Views\Draw\Details.cshtml" />
@@ -345,8 +346,8 @@
     <Content Include="Views\TeamNote\Index.cshtml" />
     <Content Include="Views\Vweek\Active.cshtml" />
     <Content Include="Views\Vweek\Index.cshtml" />
-    <Content Include="Views\SeasonSetup.cshtml" />
     <Content Include="Views\SeasonSetup\Create.cshtml" />
+    <Content Include="Views\Vdraw\Active.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

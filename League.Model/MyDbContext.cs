@@ -25,6 +25,7 @@ namespace League.Model
         public System.Data.Entity.DbSet<Scoresheet> Scoresheets { get; set; } // hba_score_sheet
         public System.Data.Entity.DbSet<Team> Teams { get; set; } // hba_team
         public System.Data.Entity.DbSet<Teamnote> Teamnotes { get; set; } // hba_team_note
+        public System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; } // hba_v_draw
         public System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; } // hba_v_individual_game
         public System.Data.Entity.DbSet<VRollingAverage> VRollingAverages { get; set; } // hba_v_RollingAverage
         public System.Data.Entity.DbSet<Vweek> Vweeks { get; set; } // hba_v_week
@@ -85,6 +86,7 @@ namespace League.Model
             modelBuilder.Configurations.Add(new ScoresheetConfiguration());
             modelBuilder.Configurations.Add(new TeamConfiguration());
             modelBuilder.Configurations.Add(new TeamnoteConfiguration());
+            modelBuilder.Configurations.Add(new VdrawConfiguration());
             modelBuilder.Configurations.Add(new VindividualgameConfiguration());
             modelBuilder.Configurations.Add(new VRollingAverageConfiguration());
             modelBuilder.Configurations.Add(new VweekConfiguration());
@@ -100,6 +102,7 @@ namespace League.Model
             modelBuilder.Configurations.Add(new ScoresheetConfiguration(schema));
             modelBuilder.Configurations.Add(new TeamConfiguration(schema));
             modelBuilder.Configurations.Add(new TeamnoteConfiguration(schema));
+            modelBuilder.Configurations.Add(new VdrawConfiguration(schema));
             modelBuilder.Configurations.Add(new VindividualgameConfiguration(schema));
             modelBuilder.Configurations.Add(new VRollingAverageConfiguration(schema));
             modelBuilder.Configurations.Add(new VweekConfiguration(schema));
@@ -127,23 +130,17 @@ namespace League.Model
             return procResultData;
         }
 
-        public System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason)
-        {
-            int procResult;
-            return HbaSEoyCertificate(pSeason, out procResult);
-        }
-
-        public System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason, out int procResult)
+        public int HbaSEoyCertificate(int? pSeason)
         {
             var pSeasonParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@p_season", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Input, Value = pSeason.GetValueOrDefault(), Precision = 10, Scale = 0 };
             if (!pSeason.HasValue)
                 pSeasonParam.Value = System.DBNull.Value;
 
             var procResultParam = new System.Data.SqlClient.SqlParameter { ParameterName = "@procResult", SqlDbType = System.Data.SqlDbType.Int, Direction = System.Data.ParameterDirection.Output };
-            var procResultData = Database.SqlQuery<HbaSEoyCertificateReturnModel>("EXEC @procResult = [dbo].[hba_s_eoy_certificate] @p_season", pSeasonParam, procResultParam).ToList();
-
-            procResult = (int) procResultParam.Value;
-            return procResultData;
+ 
+            Database.ExecuteSqlCommand("EXEC @procResult = [dbo].[hba_s_eoy_certificate] @p_season", pSeasonParam, procResultParam);
+ 
+            return (int) procResultParam.Value;
         }
 
         public System.Collections.Generic.List<HbaSRoundWeekIdsReturnModel> HbaSRoundWeekIds(int? pWeekId)

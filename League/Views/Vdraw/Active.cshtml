@@ -1,27 +1,30 @@
-﻿@model IEnumerable<League.Model.Draw>
+﻿@model IEnumerable<League.ViewModels.VdrawViewModel>
 
 @{
     ViewBag.Title = "Active";
 }
 
-<h2>Active</h2>
+<h2>Draw</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "Draw")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TeamId)
+            @Html.DisplayNameFor(model => model.Season)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.WeekId)
+            @Html.DisplayNameFor(model => model.Round)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoundWeek)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Lane)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Pairing)
+            @Html.DisplayNameFor(model => model.TeamName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Game1)
@@ -50,16 +53,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.TeamId)
+            @Html.DisplayFor(modelItem => item.Season)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.WeekId)
+            @Html.DisplayFor(modelItem => item.Round)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoundWeek)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Lane)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Pairing)
+            @Html.DisplayFor(modelItem => item.TeamName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Game1)
@@ -83,9 +89,8 @@
             @Html.DisplayFor(modelItem => item.LegalLineup)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", "Draw", new { id=item.Id }, null) |
+            @Html.ActionLink("Details", "Details", "Draw", new { id=item.Id }, null) 
         </td>
     </tr>
 }

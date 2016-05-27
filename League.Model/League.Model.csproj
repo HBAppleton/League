@@ -90,9 +90,6 @@
     <Compile Include="HbaSAveragesAuditReturnModel.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
-    <Compile Include="HbaSEoyCertificateReturnModel.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
     <Compile Include="HbaSRoundWeekIdsReturnModel.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -128,6 +125,12 @@
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="TeamnoteConfiguration.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vdraw.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VdrawConfiguration.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Vindividualgame.cs">

@@ -243,5 +243,51 @@ namespace League.ViewModels
 
             return vweek;
         }
+
+        public static VdrawViewModel VdrawToVM(Vdraw vdraw)
+        {
+            VdrawViewModel vm = new VdrawViewModel();
+
+            vm.Id = vdraw.Id;
+            vm.Season = vdraw.Season;
+            vm.Round = vdraw.Round;
+            vm.RoundWeek = vdraw.RoundWeek;
+            vm.Lane = vdraw.Lane;
+            vm.TeamName = vdraw.TeamName;
+            vm.Game1 = vdraw.Game1;
+            vm.Game2 = vdraw.Game2;
+            vm.Game3 = vdraw.Game3;
+            vm.Series = vdraw.Series;
+            vm.Bonus = vdraw.Bonus;
+            vm.Total = vdraw.Total;
+            vm.LegalLineup = vdraw.LegalLineup;
+            vm.WeekId = vdraw.WeekId;
+            vm.TeamId = vdraw.TeamId;
+
+            return vm;
+        }
+
+        public static Vdraw VdrawFromVM(VdrawViewModel vm)
+        {
+            Vdraw vdraw = new Vdraw();
+
+            vdraw.Id = vm.Id;
+            vdraw.Season = vm.Season;
+            vdraw.Round = vm.Round;
+            vdraw.RoundWeek = vm.RoundWeek;
+            vdraw.Lane = vm.Lane;
+            vdraw.TeamName = vm.TeamName;
+            vdraw.Game1 = vm.Game1;
+            vdraw.Game2 = vm.Game2;
+            vdraw.Game3 = vm.Game3;
+            vdraw.Series = vm.Series;
+            vdraw.Bonus = vm.Bonus;
+            vdraw.Total = vm.Total;
+            vdraw.LegalLineup = vm.LegalLineup;
+            vdraw.WeekId = vm.WeekId;
+            vdraw.TeamId = vm.TeamId;
+
+            return vdraw;
+        }
     }
 }

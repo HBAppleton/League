@@ -56,6 +56,7 @@
     <Compile Include="ITeamNoteRepository.cs" />
     <Compile Include="ITeamRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="IVdrawRepository.cs" />
     <Compile Include="IVWeekRepository.cs" />
     <Compile Include="IWeekRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="TeamNoteRepository.cs" />
     <Compile Include="TeamRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
+    <Compile Include="VdrawRepository.cs" />
     <Compile Include="VWeekRepository.cs" />
     <Compile Include="WeekRepository.cs" />
   </ItemGroup>

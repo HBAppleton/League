@@ -30,9 +30,5 @@ namespace League.Service
             return _drawRepository.GetByWeekId(weekId);
         }
 
-        public IEnumerable GetActive()
-        {
-            return _drawRepository.GetActive();
-        }
     }
 }

@@ -23,6 +23,7 @@ namespace League.Model
         public System.Data.Entity.DbSet<Scoresheet> Scoresheets { get; set; }
         public System.Data.Entity.DbSet<Team> Teams { get; set; }
         public System.Data.Entity.DbSet<Teamnote> Teamnotes { get; set; }
+        public System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; }
         public System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; }
         public System.Data.Entity.DbSet<VRollingAverage> VRollingAverages { get; set; }
         public System.Data.Entity.DbSet<Vweek> Vweeks { get; set; }
@@ -37,6 +38,7 @@ namespace League.Model
             Scoresheets = new FakeDbSet<Scoresheet>("Id");
             Teams = new FakeDbSet<Team>("Id");
             Teamnotes = new FakeDbSet<Teamnote>("Id");
+            Vdraws = new FakeDbSet<Vdraw>("Season", "Round", "Lane", "TeamName", "Game1", "Game2", "Game3", "Series", "Bonus", "Total", "WeekId", "Id", "TeamId");
             Vindividualgames = new FakeDbSet<Vindividualgame>("Season", "WeekNumber", "BowlerId", "Handicap", "Game", "Game1", "DrawId");
             VRollingAverages = new FakeDbSet<VRollingAverage>("Id");
             Vweeks = new FakeDbSet<Vweek>("Season", "WeekNumber", "Round", "Id");
@@ -85,17 +87,10 @@ namespace League.Model
             return new System.Collections.Generic.List<HbaSAveragesAuditReturnModel>();
         }
 
-        public System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason)
+        public int HbaSEoyCertificate(int? pSeason)
         {
-            int procResult;
-            return HbaSEoyCertificate(pSeason, out procResult);
-        }
-
-        public System.Collections.Generic.List<HbaSEoyCertificateReturnModel> HbaSEoyCertificate(int? pSeason, out int procResult)
-        {
-
-            procResult = 0;
-            return new System.Collections.Generic.List<HbaSEoyCertificateReturnModel>();
+ 
+            return 0;
         }
 
         public System.Collections.Generic.List<HbaSRoundWeekIdsReturnModel> HbaSRoundWeekIds(int? pWeekId)

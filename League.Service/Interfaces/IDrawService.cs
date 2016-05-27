@@ -13,6 +13,5 @@ namespace League.Service
         Draw GetById(long Id);
 
         IEnumerable GetByWeekId(long WeekId);
-        IEnumerable GetActive();
     }
 }

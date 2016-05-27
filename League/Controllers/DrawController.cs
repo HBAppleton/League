@@ -14,17 +14,17 @@ namespace League.Controllers
         IDrawService _DrawService;
         IWeekService _WeekService;
         ITeamService _TeamService;
-        public DrawController(IDrawService DrawService, IWeekService WeekService, ITeamService TeamService)
+        public DrawController(IDrawService drawService, IWeekService weekService, ITeamService teamService)
         {
-            _DrawService = DrawService;
-            _WeekService = WeekService;
-            _TeamService = TeamService;
+            _DrawService = drawService;
+            _WeekService = weekService;
+            _TeamService = teamService;
         }
 
         // GET: Draw
         public ActionResult Index()
         {
-            return View(_DrawService.GetActive());
+            return View(_DrawService.GetAll());
         }
 
         // GET: /Draw/Detail
@@ -60,7 +60,7 @@ namespace League.Controllers
             if (ModelState.IsValid)
             {
                 _DrawService.Create(draw);
-                return RedirectToAction("Index");
+                return RedirectToAction("Active", "Vdraw");
             }
 
             ViewBag.WeekId = new SelectList(_WeekService.GetAll(), "Id", "WeekDate", draw.WeekId);
@@ -95,7 +95,7 @@ namespace League.Controllers
             if (ModelState.IsValid)
             {
                 _DrawService.Update(draw);
-                return RedirectToAction("Index");
+                return RedirectToAction("Active", "Vdraw");
             }
 
             ViewBag.WeekId = new SelectList(_WeekService.GetAll(), "Id", "WeekDate", draw.WeekId);
@@ -127,7 +127,7 @@ namespace League.Controllers
         {
             Draw draw = _DrawService.GetById(id);
             _DrawService.Delete(draw);
-            return RedirectToAction("Index");
+            return RedirectToAction("Active", "Vdraw");
         }
     }
 }
