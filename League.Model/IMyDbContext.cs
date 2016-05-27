@@ -25,6 +25,7 @@ namespace League.Model
         System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; } // hba_v_draw
         System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; } // hba_v_individual_game
         System.Data.Entity.DbSet<VRollingAverage> VRollingAverages { get; set; } // hba_v_RollingAverage
+        System.Data.Entity.DbSet<Vscoresheet> Vscoresheets { get; set; } // hba_v_scoresheet
         System.Data.Entity.DbSet<Vweek> Vweeks { get; set; } // hba_v_week
         System.Data.Entity.DbSet<Week> Weeks { get; set; } // hba_week
 

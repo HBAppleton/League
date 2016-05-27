@@ -145,6 +145,12 @@
     <Compile Include="VRollingAverageConfiguration.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Vscoresheet.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VscoresheetConfiguration.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Vweek.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>

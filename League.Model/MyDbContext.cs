@@ -28,6 +28,7 @@ namespace League.Model
         public System.Data.Entity.DbSet<Vdraw> Vdraws { get; set; } // hba_v_draw
         public System.Data.Entity.DbSet<Vindividualgame> Vindividualgames { get; set; } // hba_v_individual_game
         public System.Data.Entity.DbSet<VRollingAverage> VRollingAverages { get; set; } // hba_v_RollingAverage
+        public System.Data.Entity.DbSet<Vscoresheet> Vscoresheets { get; set; } // hba_v_scoresheet
         public System.Data.Entity.DbSet<Vweek> Vweeks { get; set; } // hba_v_week
         public System.Data.Entity.DbSet<Week> Weeks { get; set; } // hba_week
         
@@ -89,6 +90,7 @@ namespace League.Model
             modelBuilder.Configurations.Add(new VdrawConfiguration());
             modelBuilder.Configurations.Add(new VindividualgameConfiguration());
             modelBuilder.Configurations.Add(new VRollingAverageConfiguration());
+            modelBuilder.Configurations.Add(new VscoresheetConfiguration());
             modelBuilder.Configurations.Add(new VweekConfiguration());
             modelBuilder.Configurations.Add(new WeekConfiguration());
         }
@@ -105,6 +107,7 @@ namespace League.Model
             modelBuilder.Configurations.Add(new VdrawConfiguration(schema));
             modelBuilder.Configurations.Add(new VindividualgameConfiguration(schema));
             modelBuilder.Configurations.Add(new VRollingAverageConfiguration(schema));
+            modelBuilder.Configurations.Add(new VscoresheetConfiguration(schema));
             modelBuilder.Configurations.Add(new VweekConfiguration(schema));
             modelBuilder.Configurations.Add(new WeekConfiguration(schema));
             return modelBuilder;
